@@ -2,22 +2,22 @@
   "generalInformation":
   {
     "activityDate":"", <DateTime>
-    "name":"", <string>
+    "name":"", <string, nullable>
     "location":"", <string>
     "latitude":"", <double>
     "longitude":"", <double>
-    "groupName":"", <string>
+    "groupName":"", <string, nullable>
   },
   "waterLevelAndWeather":
   {
-    "airTemperature":"", <double>
-    "waterDepth":"", <string>
-    "weather":"", <string>
-  },
+    "airTemperature":"", <double, nullable>
+    "waterDepth":"", <string, nullable>
+    "weather":"", <string, nullable>
+  }, <nullable>
   "surroundings":
-  {
-    "":"", <>
-  },
+  [
+    "", <string>
+  ], <nullable>
   "waterTesting":
   {
     "waterTemperature":"", <double, nullable>
@@ -35,24 +35,24 @@
   "pictures":
   {
     "flora":
-    {
-      "":"", <base64, nullable>
-    },
+    [
+      "", <base64>
+    ], <nullable>
     "fauna":
-    {
-      "":"", <base64, nullable>
-    },
+    [
+      "", <base64>
+    ], <nullable>
     "group":
-    {
-      "":"", <base64, nullable>
-    },
+    [
+      "", <base64>
+    ], <nullable>
     "activity":
-    {
-      "":"", <base64, nullable>
-    },
+    [
+      "", <base64>
+    ], <nullable>
     "artworks":
-    {
-      "":"", <base64, nullable>
-    }
+    [
+      "", <base64>
+    ] <nullable>
   }
 }
