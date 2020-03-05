@@ -1,0 +1,58 @@
+{
+  "generalInformation":
+  {
+    "activityDate":"", <DateTime>
+    "name":"", <string>
+    "location":"", <string>
+    "latitude":"", <double>
+    "longitude":"", <double>
+    "groupName":"", <string>
+  },
+  "waterLevelAndWeather":
+  {
+    "airTemperature":"", <double>
+    "waterDepth":"", <string>
+    "weather":"", <string>
+  },
+  "surroundings":
+  {
+    "":"", <>
+  },
+  "waterTesting":
+  {
+    "waterTemperature":"", <double, nullable>
+    "pH":"", <int, nullable>
+    "dissolvedOxygen":"", <int, nullable>
+    "hardness":"", <int, nullable>
+    "nitrate":"", <int, nullable>
+    "nitrite":"", <int, nullable>
+    "chlorine":"", <int, nullable>
+    "alkalinity":"", <int, nullable>
+    "iron":"", <int, nullable>
+    "bacteria":"", <int, nullable>
+    "turbidity":"", <int, nullable>
+  },
+  "pictures":
+  {
+    "flora":
+    {
+      "":"", <base64, nullable>
+    },
+    "fauna":
+    {
+      "":"", <base64, nullable>
+    },
+    "group":
+    {
+      "":"", <base64, nullable>
+    },
+    "activity":
+    {
+      "":"", <base64, nullable>
+    },
+    "artworks":
+    {
+      "":"", <base64, nullable>
+    }
+  }
+}
