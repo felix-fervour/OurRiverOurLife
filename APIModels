@@ -20,17 +20,17 @@
   ], <nullable>
   "waterTesting":
   {
-    "waterTemperature":"", <double, nullable>
-    "pH":"", <int, nullable>
-    "dissolvedOxygen":"", <int, nullable>
-    "hardness":"", <int, nullable>
-    "nitrate":"", <int, nullable>
-    "nitrite":"", <int, nullable>
-    "chlorine":"", <int, nullable>
-    "alkalinity":"", <int, nullable>
-    "iron":"", <int, nullable>
-    "bacteria":"", <int, nullable>
-    "turbidity":"", <int, nullable>
+    "waterTemperature":"", <string, nullable>
+    "pH":"", <string, nullable>
+    "dissolvedOxygen":"", <string, nullable>
+    "hardness":"", <string, nullable>
+    "nitrate":"", <string, nullable>
+    "nitrite":"", <string, nullable>
+    "chlorine":"", <string, nullable>
+    "alkalinity":"", <string, nullable>
+    "iron":"", <string, nullable>
+    "bacteria":"", <string, nullable>
+    "turbidity":"", <string, nullable>
   },
   "pictures":
   {
