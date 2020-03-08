@@ -10,17 +10,17 @@
         "latitude":"", <double>
         "longitude":"", <double>
       },
-      "waterLevelAndWeather":
+      "waterLevelAndWeather": <nullable>
       {
         "airTemperature":"", <double, nullable>
         "waterLevel":"", <string, nullable>
         "weather":"", <string, nullable>
-      }, <nullable>
-      "surroundings":
+      },
+      "surroundings": <nullable>
       [
        "", <string>
-      ], <nullable>
-      "waterTesting":
+      ],
+      "waterTesting": <nullable>
       {
         "waterTemperature":"", <string, nullable>
         "pH":"", <string, nullable>
@@ -33,7 +33,7 @@
         "iron":"", <string, nullable>
         "bacteria":"", <string, nullable>
         "turbidity":"", <string, nullable>
-      }, <nullable>
+      },
     }
     
     Note - "waterDepth" field under "waterLevelAndWeather" if not null, can only be one of the 4 following string constants -
