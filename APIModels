@@ -1,58 +1,80 @@
-{
-  "generalInformation":
-  {
-    "activityDate":"", <DateTime>
-    "name":"", <string, nullable>
-    "location":"", <string>
-    "latitude":"", <double>
-    "longitude":"", <double>
-    "groupName":"", <string, nullable>
-  },
-  "waterLevelAndWeather":
-  {
-    "airTemperature":"", <double, nullable>
-    "waterDepth":"", <string, nullable>
-    "weather":"", <string, nullable>
-  }, <nullable>
-  "surroundings":
-  [
-    "", <string>
-  ], <nullable>
-  "waterTesting":
-  {
-    "waterTemperature":"", <string, nullable>
-    "pH":"", <string, nullable>
-    "dissolvedOxygen":"", <string, nullable>
-    "hardness":"", <string, nullable>
-    "nitrate":"", <string, nullable>
-    "nitrite":"", <string, nullable>
-    "chlorine":"", <string, nullable>
-    "alkalinity":"", <string, nullable>
-    "iron":"", <string, nullable>
-    "bacteria":"", <string, nullable>
-    "turbidity":"", <string, nullable>
-  },
-  "pictures":
-  {
-    "flora":
-    [
-      "", <base64>
-    ], <nullable>
-    "fauna":
-    [
-      "", <base64>
-    ], <nullable>
-    "group":
-    [
-      "", <base64>
-    ], <nullable>
-    "activity":
-    [
-      "", <base64>
-    ], <nullable>
-    "artworks":
-    [
-      "", <base64>
-    ] <nullable>
-  }
-}
+1.  POST - Post water-test form and return unique-id for the submitted water-test form.
+
+    Input - Water-Test Form Model:
+    {
+      "generalInformation":
+      {
+        "activityDate":"", <DateTime>
+        "testerName":"", <string, nullable>
+        "location":"", <string>
+        "latitude":"", <double>
+        "longitude":"", <double>
+      },
+      "waterLevelAndWeather":
+      {
+        "airTemperature":"", <double, nullable>
+        "waterLevel":"", <string, nullable>
+        "weather":"", <string, nullable>
+      }, <nullable>
+      "surroundings":
+      [
+       "", <string>
+      ], <nullable>
+      "waterTesting":
+      {
+        "waterTemperature":"", <string, nullable>
+        "pH":"", <string, nullable>
+        "dissolvedOxygen":"", <string, nullable>
+        "hardness":"", <string, nullable>
+        "nitrate":"", <string, nullable>
+        "nitrite":"", <string, nullable>
+        "chlorine":"", <string, nullable>
+        "alkalinity":"", <string, nullable>
+        "iron":"", <string, nullable>
+        "bacteria":"", <string, nullable>
+        "turbidity":"", <string, nullable>
+      }, <nullable>
+    }
+    
+    Note - "waterDepth" field under "waterLevelAndWeather" if not null, can only be one of the 4 following string constants -
+      1. "Low"
+      2. "Normal"
+      3. "High"
+      4. "Flooded"
+
+    Note - "weather" field under "waterLevelAndWeather" if not null, can only be one of the 5 following string constants -
+      1. "Sunny"
+      2. "Partly Cloudy"
+      3. "Cloudy"
+      4. "Light Rain"
+      5. "Heavy Rain"
+
+    Output - Unique-ID that identifies the submitted Water-Test Form
+    {
+      "formId":"" <string>
+    }
+
+2.  POST - Post an image/video-clip in Base64 String encoding of size capped at 2MB
+    
+    Input - Image/Video Upload Model:
+    {
+      "formId":"" <string>
+      "formField":"" <string>
+      "mediaType":"" <string>
+      "mediaData":"" <Base64String>
+    }
+    
+    Note - "formField" can only be one of the following 6 string constants:
+      1. "river"
+      2. "flora"
+      3. "fauna"
+      4. "group"
+      5. "activity"
+      6. "artwork"
+      
+    Note - "mediaType" can only be one of the following 2 string constants:
+      1. "img"
+      2. "vid"
+      
+    Output - Success/Failure
+    
